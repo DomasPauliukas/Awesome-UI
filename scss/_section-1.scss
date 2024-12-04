@@ -1,0 +1,76 @@
+@use 'responsive' as r;
+@use 'variables';
+
+.s-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .s-1-text-wrapper{
+        position: relative;
+        width: 520px;
+        h1{
+            font-size: 48px;
+            color: variables.$color-dark;
+            font-weight: 500;
+            text-transform: uppercase;
+            @include r.sm{
+                font-size: 24px;
+            }
+        }
+        p{
+            font-size: 20px;
+            color: variables.$color-light-dark;
+            margin-bottom: 32px;
+            line-height: 26.4px;
+            @include r.sm{
+                font-size: 10px;
+            }
+        }
+    }
+    .s-1-image{
+        position: relative;
+        @include r.xs{
+            
+        }
+        img{
+            @include r.sm{
+                width: 100%;
+            }
+        }
+    }
+}
+.s-1-text-wrapper::before{
+    content: "";
+    background-image: url(images/Ellipse\ 116.svg);
+    width: 84px;
+    height: 84px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 160px;
+}
+.s-1-image::before{
+    content: "";
+    background-image: url(images/Ellipse\ 118.svg);
+    width: 183px;
+    height: 183px;
+    position: absolute;
+    top: 85px;
+}
+.s-1::before{
+    content: "";
+    background-image: url(images/Ellipse\ 119.svg);
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    background-repeat: no-repeat;
+    left: -157px;
+    bottom: -25px;
+    @include r.sm{
+        width: 95px;
+        height: 95px;
+        position: absolute;
+        top: 70px;
+        background-size: 100% 100%;
+    }
+}

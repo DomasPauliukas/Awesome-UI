@@ -1,0 +1,47 @@
+@use 'responsive' as r;
+@use 'variables';
+
+.s-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 105px;
+    padding-left: 60px;
+    @include r.md{
+        column-gap: 15px;
+    }
+    @include r.sm{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .s-4-img-wrapper{
+        width: 100%;
+        background: linear-gradient(rgba(239, 128, 49, 0),rgba(239, 128, 49, 0.15));
+        @include r.sm{
+            display: none;
+        }
+        img{
+            width: 100%;
+            position: relative;
+            top: -60px;
+            left: -60px;
+            @include r.lg{
+                left: -45px;
+                top: -45px;
+            }
+        }
+    }
+    .s-4-text-wrapper{
+        width: 412px;
+        @include r.sm{
+            width: 80%;
+        }
+        p{
+            margin: 24px 0px 40px;
+            line-height: 21.12px;
+            @include r.sm{
+                font-size: 10px;
+            }
+        }
+    }
+}

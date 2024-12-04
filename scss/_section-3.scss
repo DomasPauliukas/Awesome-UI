@@ -1,0 +1,94 @@
+@use 'responsive' as r;
+@use 'variables';
+
+.s-3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 190px;
+    @include r.sm{
+        padding-right: 0px;
+    }
+    .s-3-title{
+        text-align: center;
+    }
+    .s-3-text-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 40px;
+        @include r.lg{
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            justify-items: end;
+        }
+      
+        .s-3-text-item{
+            padding: 78px 50px 72px;
+            border-radius: 8px;
+            background-color: rgb(245, 244, 244);
+            @include r.lg{
+                width: 85%;
+            }
+            @include r.sm{
+                width: 100%;
+            }
+            &:nth-child(2){
+                background-color: variables.$color-primary;
+                h4, p{
+                    color: white;
+                }
+            }
+            &:nth-child(3){
+                @include r.lg{
+                    display: none;
+                }
+            }
+            h4{
+                font-weight: 500;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: variables.$color-dark;
+            }
+            p{
+                font-weight: 500;
+                color: variables.$color-light-dark;
+                line-height: 21.12px;
+                @include r.sm{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+.s-3::before{
+    content: "";
+    background-image: url(images/Dots\ 8px.1.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 213px;
+    bottom: 150px;
+    left: -35px;
+    z-index: -1;
+    @include r.lg{
+        left: 30px;
+    }
+    @include r.sm{
+        left: 10px;
+    }
+
+}
+.s-3::after{
+    content: "";
+    position: absolute;
+    background-image: url(images/Rectangle\ 497.svg);
+    width: 370px;
+    height: 182px;
+    border-radius: 8px;
+    right: -157px;
+    bottom: 150px;
+    z-index: -1;
+    @include r.xl{
+        display: none;
+    }
+}

@@ -1,0 +1,85 @@
+@use 'responsive' as r;
+@use 'variables';
+
+.s-5{
+    padding: 137px 32px 172px;
+    .s-5-title-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 50px;
+
+        .s-5-nav-arrows{
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            
+            .active-arrow{
+                width: 75px;
+                height: 75px;
+                background-color: variables.$color-primary;
+                text-align: center;
+                border-radius: 80px;
+                img{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .s-5-cards-wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 40px;
+        @include r.lg{
+            grid-template-columns: 1fr 1fr;
+        }
+        @include r.sm{
+            grid-template-columns: 1fr;
+            place-self: center;
+        }
+
+        .s-5-card-item{
+            border-radius: 8px;
+            background: linear-gradient(rgba(100, 123, 100, 0),rgba(100, 123, 100, 0), rgba(100, 123, 100, 0.77));
+            &:last-child{
+                @include r.lg{
+                    display: none;
+                }
+            }
+            &:nth-child(2){
+                @include r.sm{
+                    display: none;
+                }
+            }
+            .card-credentials{
+                display: flex;
+                @include r.lg{
+                    justify-content: center;
+                }
+                .card-item-name{
+                    h5{
+                        font-weight: 500;
+                        color: variables.$color-dark;
+                        margin: 0px 0px 5px;
+                    }
+                    h6{
+                        font-weight: 400;
+                        color: variables.$color-light-dark;
+                        font-size: 13px;
+                        margin: 0px;
+                    }
+                }
+            }   
+            p{
+                font-weight: 400;
+                color: variables.$color-light-dark;
+                font-style: italic;
+                line-height: 21.12px;
+                @include r.sm{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@use 'responsive' as r;
+@use 'variables';
+
+.s-2{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    position: relative;
+    gap: 109px;
+    padding: 100px 32px 147px;
+    @include r.lg{
+        display: flex;
+        flex-direction: column;
+    }
+    .s-2-text-wrapper{
+        @include r.lg{
+            text-align: center;
+        }
+        @include r.sm{
+            text-align: left;
+        }
+        p{
+            margin-bottom: 40px;
+            color: variables.$color-light-dark;
+            font-weight: 400;
+            line-height: 21.12px;
+            @include r.sm{
+                font-size: 10px;
+            }
+        }
+    }
+    .s-2-trips{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        .s-2-trip-item{
+            padding: 40px 27px 45px 40px;
+            &:nth-child(1){
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0px 5px 10px 3px rgba(155, 148, 148, 0.17);
+
+                .trip-item-logo{
+                    background-color: variables.$color-primary;
+                }
+            }
+            .trip-item-logo{
+                width: 48px;
+                height: 48px;
+                background-color: white;
+                border-radius: 8px;
+                text-align: center;
+                
+                img{
+                    width: 28px;
+                    height: 28px;
+                    margin-top: 10px;                   
+                }
+            }
+            h4{
+                margin-top: 16px;
+                margin-bottom: 6px;
+                color: variables.$color-dark;
+                font-weight: 500;
+                font-size: 24px;
+            }
+            p{
+                margin: 0px;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 17.16px;
+                @include r.sm{
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
+.s-2::before{
+    content: "";
+    background-image: url(images/Rectangle\ 491.svg);
+    position: absolute;
+    width: 600px;
+    height: 153px;
+    top: 100px;
+    left: -157px;
+    @include r.lg{
+        width: 100%;
+        left: 0px;
+    }
+    @include r.sm{
+        width: 500px;
+        left: -80px;
+    }
+}

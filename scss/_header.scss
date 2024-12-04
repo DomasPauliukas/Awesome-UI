@@ -1,0 +1,59 @@
+@use 'responsive' as r;
+@use 'variables';
+
+header{
+    padding: 55px 0px 57px;
+    .navigation-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-img-title{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            img{
+                width: 69px;
+                height: 50px;
+                @include r.sm{
+                    width: 45px;
+                    height: 33px;
+                }
+            }
+            span{
+                text-transform: uppercase;
+                color: variables.$color-primary;
+            }
+        }
+        .header-links{
+            display: flex;
+            @include r.xl{
+                flex-direction: column;
+                row-gap: 50px;
+            @include r.sm{
+                display: none;
+            }
+            }
+            .special-link{
+                @include r.xl{
+                    text-align: end;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: variables.$color-dark;
+                text-transform: uppercase;
+                padding-left: 48px;
+                font-weight: 500;
+                @include r.lg{
+                    padding-left: 20px;
+                }
+                
+            }
+            a.green-link{
+                padding: 10px 15px;
+                background: linear-gradient(variables.$bg-color-dark);                color: white;
+                margin-left: 48px;
+            }
+        }
+    }
+}

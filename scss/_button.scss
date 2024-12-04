@@ -1,0 +1,28 @@
+@use 'responsive'as r;
+@use 'variables';
+
+.green-button{
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    padding: 27px 186px 26px 29px;
+    letter-spacing: 0.5px;
+    background: linear-gradient(variables.$bg-color-dark);
+    border-style: none;    
+    border-radius: 2px;
+    @include r.xs{
+        font-size: 10px;
+    }
+}
+.green-button::after{
+    content: "";
+    background-image: url(images/button-arrow.svg);
+    position: absolute;
+    color: white;
+    height: 15px;
+    width: 22px;
+    background-repeat: no-repeat;
+    right: 29px;
+
+
+}

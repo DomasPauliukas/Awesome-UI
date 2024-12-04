@@ -1,0 +1,30 @@
+@use 'scss/responsive' as r;
+@use 'scss/variables';
+@use 'scss/title';
+@use 'scss/button';
+@use 'scss/header';
+@use 'scss/section-1';
+@use 'scss/section-2';
+@use 'scss/section-3';
+@use 'scss/section-4';
+@use 'scss/section-5';
+@use 'scss/footer';
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+*{
+    font-family: "Parkinsans", sans-serif;;
+}
+body{
+    background: linear-gradient(rgba(239, 128, 49, 0), rgba(239, 128, 49, 0.15), rgba(239, 128, 49, 0));
+    margin: 0px;
+}
+.container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
