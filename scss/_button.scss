@@ -12,6 +12,8 @@
     border-radius: 2px;
     @include r.xs{
         font-size: 10px;
+        padding: 13px 78px 13px 15px;
+        width: 195px;
     }
 }
 .green-button::after{

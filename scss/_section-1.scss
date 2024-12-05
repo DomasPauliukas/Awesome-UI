@@ -8,7 +8,11 @@
     position: relative;
     .s-1-text-wrapper{
         position: relative;
-        width: 520px;
+        // width: 520px;
+
+        @include r.xs{
+            width: 100%;
+        }
         h1{
             font-size: 48px;
             color: variables.$color-dark;
@@ -16,6 +20,7 @@
             text-transform: uppercase;
             @include r.sm{
                 font-size: 24px;
+                line-height: 27.84px;
             }
         }
         p{
@@ -25,17 +30,20 @@
             line-height: 26.4px;
             @include r.sm{
                 font-size: 10px;
+                line-height: 13.2px;
             }
         }
     }
     .s-1-image{
         position: relative;
         @include r.xs{
+            width: 178px;
+            height: 304px;
             
         }
         img{
             @include r.sm{
-                width: 100%;
+                height: 304px;
             }
         }
     }
@@ -48,6 +56,12 @@
     background-repeat: no-repeat;
     position: absolute;
     left: 160px;
+    @include r.xs{
+        width: 49.06px;
+        height: 49.06px;
+        background-size: 100% 100%;
+        left: 80px;
+    }
 }
 .s-1-image::before{
     content: "";
@@ -56,6 +70,17 @@
     height: 183px;
     position: absolute;
     top: 85px;
+    @include r.sm{
+        background-size: 100% 100%;
+        top: 45px;
+        width: 100px;
+        height: 100px;
+    }
+    @include r.xs{
+        width: 95px;
+        height: 95px;
+        top: 45px;
+    }
 }
 .s-1::before{
     content: "";

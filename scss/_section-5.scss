@@ -3,6 +3,9 @@
 
 .s-5{
     padding: 137px 32px 172px;
+    @include r.xs{
+        padding-bottom: 64.85px;
+    }
     .s-5-title-wrap{
         display: flex;
         flex-direction: row;

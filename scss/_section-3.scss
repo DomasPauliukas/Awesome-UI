@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 190px;
+    overflow: hidden;
     @include r.sm{
         padding-right: 0px;
     }
@@ -21,6 +22,10 @@
             column-gap: 20px;
             justify-items: end;
         }
+        @include r.xs{
+            margin-left: 32px;
+            margin-right: -32px;
+        }
       
         .s-3-text-item{
             padding: 78px 50px 72px;
@@ -31,6 +36,11 @@
             }
             @include r.sm{
                 width: 100%;
+                padding: 35px 20px 20px;
+            }
+            @include r.xs{
+                padding: 34px 22px 31px;
+                border-radius: 3.49px;
             }
             &:nth-child(2){
                 background-color: variables.$color-primary;
@@ -43,11 +53,21 @@
                     display: none;
                 }
             }
+            img{
+                @include r.xs{
+                    width: 19.79px;
+                    height: 22.51px;
+                }
+            }
             h4{
                 font-weight: 500;
                 font-size: 24px;
                 text-transform: uppercase;
                 color: variables.$color-dark;
+                @include r.xs{
+                    font-size: 10px;
+                    line-height: 11.6px;
+                }
             }
             p{
                 font-weight: 500;
@@ -55,6 +75,10 @@
                 line-height: 21.12px;
                 @include r.sm{
                     font-size: 10px;
+                }
+                @include r.xs{
+                    font-size: 8px;
+                    line-height: 10.56px;
                 }
             }
         }
@@ -76,6 +100,13 @@
     @include r.sm{
         left: 10px;
     }
+    @include r.xs{
+        width: 93.38px;
+        height: 92.95px;
+        opacity: 40%;
+        left: 30px;
+        bottom: 160px;
+    }
 
 }
 .s-3::after{
@@ -88,7 +119,7 @@
     right: -157px;
     bottom: 150px;
     z-index: -1;
-    @include r.xl{
+    @include r.sm{
         display: none;
     }
 }
