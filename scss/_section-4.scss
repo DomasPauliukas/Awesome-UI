@@ -6,35 +6,64 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     column-gap: 105px;
-    padding-left: 60px;
     @include r.md{
-        column-gap: 15px;
+        grid-template-columns: 1fr 2fr;
     }
     @include r.sm{
-        grid-template-columns: 1fr;
-        justify-items: center;
+        column-gap: 0px;
     }
+    @include r.xs{
+        position: relative;
+    }
+    // @include r.md{
+    //     column-gap: 15px;
+    // }
+    // @include r.sm{
+    //     grid-template-columns: 1fr;
+    //     justify-items: center;
+    // }
     .s-4-img-wrapper{
-        width: 100%;
         background: linear-gradient(rgba(239, 128, 49, 0),rgba(239, 128, 49, 0.15));
+        position: relative;
+        right: -40px;
         @include r.sm{
-            display: none;
+            right: 30px;
+            top: -30px;
         }
+        @include r.xs{
+            position: absolute;
+            width: 277px;
+            height: 285px;
+            right: 100%;
+            transform: translate(20%);
+        }
+        // @include r.sm{
+        //     display: none;
+        // }
         img{
-            width: 100%;
             position: relative;
-            top: -60px;
-            left: -60px;
-            @include r.lg{
-                left: -45px;
-                top: -45px;
+            width: 100%;
+            right: 35px;
+            top: -30px;
+            @include r.xs{
+                right: 20px;
+                top: -10px;
             }
+            // width: 100%;
+            // position: relative;
+            // top: -60px;
+            // left: -60px;
+            // @include r.lg{
+            //     left: -45px;
+            //     top: -45px;
+            // }
         }
     }
     .s-4-text-wrapper{
-        width: 412px;
-        @include r.sm{
-            width: 80%;
+        @include r.xs{
+            position: relative;
+            left: 50px;
+            width: 300px;
         }
         p{
             margin: 24px 0px 40px;

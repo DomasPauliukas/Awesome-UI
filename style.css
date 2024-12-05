@@ -34,7 +34,7 @@ h3 {
   position: relative;
   padding: 27px 186px 26px 29px;
   letter-spacing: 0.5px;
-  background: linear-gradient(rgb(100, 123, 100), rgb(102, 172, 102));
+  background: linear-gradient(to right, rgb(100, 123, 100), rgb(102, 172, 102));
   border-style: none;
   border-radius: 2px;
 }
@@ -117,7 +117,7 @@ header .navigation-wrapper .header-links a {
 }
 header .navigation-wrapper .header-links a.green-link {
   padding: 10px 15px;
-  background: linear-gradient(rgb(100, 123, 100), rgb(102, 172, 102));
+  background: linear-gradient(to right, rgb(100, 123, 100), rgb(102, 172, 102));
   color: white;
   margin-left: 48px;
 }
@@ -139,8 +139,10 @@ header .navigation-wrapper .links-shortcut img {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .s-1 .s-1-text-wrapper {
+  width: 70%;
   position: relative;
 }
 @media (max-width: 500px) {
@@ -174,16 +176,25 @@ header .navigation-wrapper .links-shortcut img {
 }
 .s-1 .s-1-image {
   position: relative;
+  width: 30%;
 }
 @media (max-width: 500px) {
   .s-1 .s-1-image {
-    width: 178px;
     height: 304px;
+    position: unset;
   }
 }
 @media (max-width: 720px) {
   .s-1 .s-1-image img {
     height: 304px;
+  }
+}
+@media (max-width: 500px) {
+  .s-1 .s-1-image img {
+    position: absolute;
+    width: 177px;
+    left: 100%;
+    transform: translate(-50%);
   }
 }
 
@@ -226,6 +237,7 @@ header .navigation-wrapper .links-shortcut img {
     width: 95px;
     height: 95px;
     top: 45px;
+    right: -20px;
   }
 }
 
@@ -560,47 +572,60 @@ header .navigation-wrapper .links-shortcut img {
   align-items: center;
   -moz-column-gap: 105px;
        column-gap: 105px;
-  padding-left: 60px;
 }
 @media (max-width: 800px) {
   .s-4 {
-    -moz-column-gap: 15px;
-         column-gap: 15px;
+    grid-template-columns: 1fr 2fr;
   }
 }
 @media (max-width: 720px) {
   .s-4 {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .s-4 {
+    position: relative;
   }
 }
 .s-4 .s-4-img-wrapper {
-  width: 100%;
   background: linear-gradient(rgba(239, 128, 49, 0), rgba(239, 128, 49, 0.15));
+  position: relative;
+  right: -40px;
 }
 @media (max-width: 720px) {
   .s-4 .s-4-img-wrapper {
-    display: none;
+    right: 30px;
+    top: -30px;
+  }
+}
+@media (max-width: 500px) {
+  .s-4 .s-4-img-wrapper {
+    position: absolute;
+    width: 277px;
+    height: 285px;
+    right: 100%;
+    transform: translate(20%);
   }
 }
 .s-4 .s-4-img-wrapper img {
-  width: 100%;
   position: relative;
-  top: -60px;
-  left: -60px;
+  width: 100%;
+  right: 35px;
+  top: -30px;
 }
-@media (max-width: 920px) {
+@media (max-width: 500px) {
   .s-4 .s-4-img-wrapper img {
-    left: -45px;
-    top: -45px;
+    right: 20px;
+    top: -10px;
   }
 }
-.s-4 .s-4-text-wrapper {
-  width: 412px;
-}
-@media (max-width: 720px) {
+@media (max-width: 500px) {
   .s-4 .s-4-text-wrapper {
-    width: 80%;
+    position: relative;
+    left: 50px;
+    width: 300px;
   }
 }
 .s-4 .s-4-text-wrapper p {
@@ -635,10 +660,15 @@ header .navigation-wrapper .links-shortcut img {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media (max-width: 720px) {
+  .s-5 .s-5-title-wrap .s-5-nav-arrows {
+    display: none;
+  }
+}
 .s-5 .s-5-title-wrap .s-5-nav-arrows .active-arrow {
   width: 75px;
   height: 75px;
-  background-color: #647B64;
+  background: linear-gradient(to right, rgb(100, 123, 100), rgb(102, 172, 102));
   text-align: center;
   border-radius: 80px;
 }
@@ -664,7 +694,7 @@ header .navigation-wrapper .links-shortcut img {
 }
 .s-5 .s-5-cards-wrap .s-5-card-item {
   border-radius: 8px;
-  background: linear-gradient(rgba(100, 123, 100, 0), rgba(100, 123, 100, 0), rgba(100, 123, 100, 0.77));
+  background: linear-gradient(rgba(100, 123, 100, 0), rgba(100, 123, 100, 0), rgba(100, 123, 100, 0.1));
 }
 @media (max-width: 920px) {
   .s-5 .s-5-cards-wrap .s-5-card-item:last-child {
@@ -881,7 +911,7 @@ footer .footer-wrapper .contact-us button {
 }
 
 body {
-  background: linear-gradient(rgba(239, 128, 49, 0), rgba(239, 128, 49, 0.15), rgba(239, 128, 49, 0));
+  background: linear-gradient(rgba(239, 128, 49, 0.15), rgba(239, 128, 49, 0), rgba(239, 128, 49, 0));
   margin: 0px;
 }
 

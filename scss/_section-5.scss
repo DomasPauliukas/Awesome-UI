@@ -17,11 +17,14 @@
             display: flex;
             align-items: center;
             column-gap: 30px;
+            @include r.sm{
+                display: none;
+            }
             
             .active-arrow{
                 width: 75px;
                 height: 75px;
-                background-color: variables.$color-primary;
+                background: linear-gradient(variables.$bg-color-dark);
                 text-align: center;
                 border-radius: 80px;
                 img{
@@ -44,7 +47,7 @@
 
         .s-5-card-item{
             border-radius: 8px;
-            background: linear-gradient(rgba(100, 123, 100, 0),rgba(100, 123, 100, 0), rgba(100, 123, 100, 0.77));
+            background: linear-gradient(rgba(100, 123, 100, 0),rgba(100, 123, 100, 0), rgba(100, 123, 100, 10%));
             &:last-child{
                 @include r.lg{
                     display: none;

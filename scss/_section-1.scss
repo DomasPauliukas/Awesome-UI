@@ -6,7 +6,9 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    overflow: hidden;
     .s-1-text-wrapper{
+        width: 70%;
         position: relative;
         // width: 520px;
 
@@ -36,14 +38,20 @@
     }
     .s-1-image{
         position: relative;
+        width: 30%;
         @include r.xs{
-            width: 178px;
             height: 304px;
-            
+            position: unset;
         }
         img{
             @include r.sm{
                 height: 304px;
+            }
+            @include r.xs{
+                position: absolute;
+                width: 177px;
+                left: 100%;
+                transform: translate(-50%);
             }
         }
     }
@@ -80,6 +88,7 @@
         width: 95px;
         height: 95px;
         top: 45px;
+        right: -20px;
     }
 }
 .s-1::before{
