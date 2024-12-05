@@ -55,5 +55,15 @@ header{
                 margin-left: 48px;
             }
         }
+        .links-shortcut{
+            display: none;
+            @include r.sm{
+                display: block;
+            }
+            img{
+                width: 28px;
+                height: 28px;
+            }
+        }
     }
 }

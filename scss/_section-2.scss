@@ -11,12 +11,18 @@
         display: flex;
         flex-direction: column;
     }
+    @include r.xs{
+        padding-bottom: 57.47px;
+    }
     .s-2-text-wrapper{
         @include r.lg{
             text-align: center;
         }
         @include r.sm{
             text-align: left;
+        }
+        @include r.xs{
+            width: 85%;
         }
         p{
             margin-bottom: 40px;
@@ -25,6 +31,7 @@
             line-height: 21.12px;
             @include r.sm{
                 font-size: 10px;
+                line-height: 13.2px;
             }
         }
     }
@@ -34,11 +41,16 @@
         column-gap: 20px;
         .s-2-trip-item{
             padding: 40px 27px 45px 40px;
+            @include r.xs{
+                padding: 22px 0px 20px 16px;
+            }
             &:nth-child(1){
                 background-color: white;
                 border-radius: 8px;
                 box-shadow: 0px 5px 10px 3px rgba(155, 148, 148, 0.17);
-
+                @include r.xs{
+                    padding-right: 16px;
+                }
                 .trip-item-logo{
                     background-color: variables.$color-primary;
                 }
@@ -49,11 +61,21 @@
                 background-color: white;
                 border-radius: 8px;
                 text-align: center;
+                @include r.xs{
+                    width: 25.33px;
+                    height: 25.33px;
+                    border-radius: 4.31px;
+                }
                 
                 img{
                     width: 28px;
                     height: 28px;
-                    margin-top: 10px;                   
+                    margin-top: 10px; 
+                    @include r.xs{
+                        width: 15.08px;
+                        height: 15.08px;
+                        margin-top: 5px;
+                    }                  
                 }
             }
             h4{
@@ -62,6 +84,11 @@
                 color: variables.$color-dark;
                 font-weight: 500;
                 font-size: 24px;
+                text-transform: uppercase;
+                @include r.xs{
+                    font-size: 12px;
+                    line-height: 13.92px;
+                }
             }
             p{
                 margin: 0px;
@@ -70,6 +97,7 @@
                 line-height: 17.16px;
                 @include r.sm{
                     font-size: 8px;
+                    line-height: 10.56px;
                 }
             }
         }
@@ -90,5 +118,10 @@
     @include r.sm{
         width: 500px;
         left: -80px;
+    }
+    @include r.xs{
+        width: 325px;
+        height: 75px;
+        top: 90px;
     }
 }
